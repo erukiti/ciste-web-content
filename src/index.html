@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<meta charset="utf-8">
+	<title data-bind="text: title"></title>
+<body>
+
+<div class="window">
+	<div class="window-content">
+		<div class="pane-group" data-bind="foreach: panes">
+			<div data-bind="component: {name: name, params: {}}, css: klass, attr: {this: this}">
+		</div>
+	</div>
+
+</div>
+
+<script src="./index.js"></script>
+
+</body>
+</html>
