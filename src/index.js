@@ -16,7 +16,9 @@ limitations under the License.
 
 "use strict"
 
-console.dir(location.hash)
+console.log("hoge")
+console.dir(process.env.GIT_HASH)
+console.dir(location)
 
 // const assert = require('power-assert')
 window.Rx = require('rx')

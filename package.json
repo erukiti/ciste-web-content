@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "open 'http://localhost:8080/webpack-dev-server/'; npm run watch",
-    "watch": "webpack-dev-server --progress --colors",
-    "build": "webpack --progress --colors"
+    "watch": "GIT_HASH=$(git rev-parse HEAD) webpack-dev-server --progress --colors",
+    "build": "GIT_HASH=$(git rev-parse HEAD) webpack --progress --colors"
   },
   "keywords": [],
   "author": "SASAKI, Shunsuke",
@@ -21,12 +21,14 @@
     "clean-webpack-plugin": "^0.1.8",
     "copy-webpack-plugin": "^1.1.1",
     "css-loader": "^0.23.1",
+    "envify": "^3.4.0",
     "file-loader": "^0.8.5",
     "html-loader": "^0.4.0",
     "json-loader": "^0.5.4",
     "node-sass": "^3.4.2",
     "sass-loader": "^3.1.2",
     "style-loader": "^0.13.0",
+    "transform-loader": "^0.2.3",
     "url-loader": "^0.5.7",
     "webpack": "^1.12.12",
     "webpack-dev-server": "^1.14.1"

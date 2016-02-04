@@ -9,6 +9,9 @@ var config = {
 		filename: 'index.js'
 	},
 	module: {
+		postLoaders: [{
+			loader: 'transform/cacheable?envify'
+		}],
 		loaders: [{
 			test: /\.scss$/,
 			loader: 'style!css!sass?sourceMap'
