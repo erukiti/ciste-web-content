@@ -13,6 +13,7 @@
   "author": "SASAKI, Shunsuke",
   "license": "Apache-2.0",
   "dependencies": {
+    "ajax-promise": "^0.8.1",
     "rx": "^4.0.7",
     "webrx": "^1.4.4"
   },

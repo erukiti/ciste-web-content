@@ -7,7 +7,7 @@
 <div class="window">
 	<div class="window-content">
 		<div class="pane-group" data-bind="foreach: panes">
-			<div data-bind="component: {name: name, params: {}}, css: klass, attr: {this: this}">
+			<div data-bind="component: {name: name, params: {opt: @opt}}, css: klass, attr: {this: this}">
 		</div>
 	</div>
 

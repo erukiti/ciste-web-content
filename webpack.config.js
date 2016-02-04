@@ -43,7 +43,13 @@ var config = {
 			verbose: true,
 			dry: false
 		})
-	]
+	],
+	devtool: 'inline-source-map',
+	node: {
+		fs: "empty",
+		net: "empty",
+		tls: "empty"
+	}
 };
 
 module.exports = config;
