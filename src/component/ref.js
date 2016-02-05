@@ -23,11 +23,9 @@ class NaviViewModel {
 			}
 		}).toProperty()
 
-
-
 		ajax.get(`http://localhost:3000/api/v1/box/${this.ref()}/status`)
 			.then((status) => {
-				if (status.success) {
+				if (status.Success) {
 					this.successStatus(1)
 				} else {
 					this.successStatus(2)
