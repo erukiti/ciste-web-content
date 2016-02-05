@@ -12,6 +12,19 @@ class NaviViewModel {
 		this.output = wx.property('')
 		this.successStatus = wx.property(0)
 
+		this.successText = wx.whenAny(this.successStatus, (successStatus) => {
+			switch (successStatus) {
+			case 0:
+				return "running..."
+			case 1:
+				return "success."
+			case 2:
+				return "failed."
+			}
+		}).toProperty()
+
+
+
 		ajax.get(`http://localhost:3000/api/v1/box/${this.ref()}/status`)
 			.then((status) => {
 				if (status.success) {
