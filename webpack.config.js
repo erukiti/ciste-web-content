@@ -41,6 +41,7 @@ var config = {
 	plugins: [
 		new CopyWebpackPlugin([
 			{from: 'src/index.html'},
+			{from: 'src/favicon.png'},
 		]),
 		new CleanWebpackPlugin(['dist'], {
 			verbose: true,
